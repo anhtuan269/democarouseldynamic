@@ -1,0 +1,107 @@
+.single-info 
+    .container 
+        .shop-single-info
+            .info-tab
+                ul.nav
+                    li
+                        a#descript.active(href="#") Description
+                    li
+                        a#review(href="#") Reviews
+            .info-content
+                .description.pd25
+                    p At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.
+                .reviews.none
+                    h3.review-title Customer Reviews
+                    ul.review-items
+                        li
+                            .single-review
+                                h6.name Rosie Silva
+                                .rating
+                                    ul
+                                        li
+                                            i.fas.fa-star
+                                        li
+                                            i.fas.fa-star
+                                        li
+                                            i.fas.fa-star
+                                        li
+                                            i.fas.fa-star
+                                        li
+                                            i.fas.fa-star
+                                    span Oct 20, 2020
+                                p Proin bibendum dolor vitae neque ornare, vel mollis est venenatis. Orci varius natoque penatibus et magnis dis parturient montes, nascet
+                        li
+                            .single-review
+                                h6.name Rosie Silva
+                                .rating
+                                    ul
+                                        li
+                                            i.fas.fa-star
+                                        li
+                                            i.fas.fa-star
+                                        li
+                                            i.fas.fa-star
+                                        li
+                                            i.fas.fa-star
+                                        li
+                                            i.fas.fa-star
+                                    span Oct 20, 2020
+                                p Proin bibendum dolor vitae neque ornare, vel mollis est venenatis. Orci varius natoque penatibus et magnis dis parturient montes, nascet
+                        li
+                            .single-review
+                                h6.name Rosie Silva
+                                .rating
+                                    ul
+                                        li
+                                            i.fas.fa-star
+                                        li
+                                            i.fas.fa-star
+                                        li
+                                            i.fas.fa-star
+                                        li
+                                            i.fas.fa-star
+                                        li
+                                            i.fas.fa-star
+                                    span Oct 20, 2020
+                                p Proin bibendum dolor vitae neque ornare, vel mollis est venenatis. Orci varius natoque penatibus et magnis dis parturient montes, nascet
+                    .review-form
+                        form(action="#")
+                            .single-form.mt15
+                                .form-name
+                                    label Name
+                                    input(type="text" placeholder="Enter Your Name ")
+                                .form-name
+                                    label Email
+                                    input(type="text" placeholder="john.smith@example.com ")
+                            .review-rating.mt15
+                                label Ratting
+                                ul
+                                    li
+                                        i.fas.fa-star
+                                    li
+                                        i.fas.fa-star
+                                    li
+                                        i.fas.fa-star
+                                    li
+                                        i.fas.fa-star
+                                    li
+                                        i.fas.fa-star
+                            .body.mt15
+                                label Body Of Review (1500)
+                                textarea#body(name="", cols="30", rows="10" placeholder="Write you  comments here")
+                            .submit.mt15
+                                button Submit Review
+script.
+    $('#descript').click(function(){
+        $('#descript').addClass('active');
+        $('#review').removeClass('active');
+        $('.description').removeClass('none');
+        $('.reviews').addClass('none');
+    })
+     $('#review').click(function(){
+        $('#review').addClass('active');
+        $('#descript').removeClass('active');
+         $('.description').addClass('none');
+        $('.reviews').removeClass('none');
+    })
+                                 

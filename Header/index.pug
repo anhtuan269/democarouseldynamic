@@ -1,0 +1,164 @@
+.header
+    .top-notice
+        .container
+            .notice
+                p 
+                    |All featured product 50% off 
+                    a(href="#") Shop Now
+            .close-btn
+                button.close#close
+                    i.fas.fa-times  
+    .main-header
+        .container
+            .row
+                .col-6.col-2
+                    .header-logo
+                        .logo
+                            a(href="index.pug")
+                                img(src="./image/logo .png ", alt="")
+                .col-6.col-7.hide
+                    .header-menu
+                        .nav
+                            ul 
+                                li
+                                    a(href="index.pug") home
+                                li.has-children
+                                    a(href="#") shop
+                                        span.new New
+                                    i.fas.fa-angle-down
+                                    ul.mega-sub
+                                        li.dropdown
+                                            a(href="#").mega-title SHOP
+                                            ul.sub-menu
+                                                li
+                                                    a(href="shop-grid.html") Shop Grid 3
+                                                li
+                                                    a(href="#") Shop Grid 4
+                                                li
+                                                    a(href="shop-list.html") Shop List
+                                                li
+                                                    a(href="shop-grid-left-sidebar.html") Shop Grid List Sidebar
+                                                li
+                                                    a(href="#") Shop Grid Right Sidebar 
+                                                li
+                                                    a(href="#") Shop List Left Sidebar
+                                                li
+                                                    a(href="#") Shop List Right SIdebar
+                                        li.dropdown
+                                            a(href="#").mega-title SHOP SINGLE
+                                            ul.sub-menu
+                                                li
+                                                    a(href="single.html") Shop Single
+                                                li
+                                                    a(href="#") Shop Single Affiliate                                                               
+                                                li
+                                                    a(href="variable-product.html") Shop Single Variable
+                                                li
+                                                    a(href="#") Shop Single Group                                            
+                                        li.dropdown
+                                            a(href="#").mega-title PAGE
+                                            ul.sub-menu
+                                                li
+                                                    a(href="cart.html") Cart
+                                                li
+                                                    a(href="#") Wishlist
+                                                li
+                                                    a(href="#") Compare
+                                                li
+                                                    a(href="checkout.html") Checkout
+                                                li
+                                                    a(href="empty-cart.html") Empty Cart
+                                                li
+                                                    a(href="#") My Account                                            
+                                        li.dropdown
+                                            a(href="#")                                          
+                                                img(src="./image/menu-banner.jpg", alt="")
+
+                                li.has-children
+                                    a(href="#") blog
+                                    i.fas.fa-angle-down
+                                    ul.has-sub
+                                        li.sub-item 
+                                            a(href="#") 
+                                                | Blog
+                                                i.fas.fa-angle-right
+                                            ul.has-sub
+                                                li
+                                                    a(href="#") Blog
+                                                li.mt15
+                                                    a(href="#") Blog Left Sidebar
+                                                li.mt15
+                                                    a(href="#") Blog Right Sidebar
+                                        li.sub-item.mt15 
+                                            a(href="#") 
+                                                | Blog Single
+                                                i.fas.fa-angle-right
+                                            ul.has-sub
+                                                li
+                                                    a(href="#") Blog Single Left Sidebar
+                                                li.mt15
+                                                    a(href="#") Blog Single Right Sidebar
+
+                                li.has-children
+                                    a(href="#") page
+                                        span.sale Sale
+                                    i.fas.fa-angle-down
+                                    ul.has-sub
+                                        li
+                                            a(href="#") About
+                                        li.mt15
+                                            a(href="cart.html") Cart
+                                        li.mt15
+                                            a(href="#") Wishlist
+                                        li.mt15
+                                            a(href="#") Compare
+                                        li.mt15
+                                            a(href="checkout.html") Checkout
+                                        li.mt15
+                                            a(href="empty-cart.html") Empty Cart
+                                        li.mt15
+                                            a(href="#") My Account
+                                        li.mt15
+                                            a(href="#") Register
+                                        li.mt15
+                                            a(href="#") Login
+                                li
+                                    a(href="#") contact
+                .col-6.col-3
+                    .header-contact
+                        .input
+                            form(action="#")
+                                input(type="text" placeholder="Search our store")
+                                button 
+                                    i.fas.fa-search
+                        .header-account
+                            a(href="#")
+                                i.fas.fa-user
+                            ul#user-menu
+                                li
+                                    a(href="#") Delivery
+                                li
+                                    a(href="#") Legal Notice
+                                li
+                                    a(href="#") Secure Payment
+                                li
+                                    a(href="#") Sitemap
+                                li
+                                    a(href="#") About Us 
+                        .header-cart.ml20
+                            a(href="#")
+                                i.fas.fa-shopping-bag
+                                span.item-count 0
+                        .mobile.ml20
+                            button#trigle-menu
+                                span
+                                span
+                                span
+                    
+script.
+    $('#close').click(function(){
+        $('.top-notice').addClass('none')
+    })
+    $('.fa-user').click(function(){
+        $('#user-menu').toggleClass('show')
+    })

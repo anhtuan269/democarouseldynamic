@@ -1,0 +1,18 @@
+{
+    "items" : [
+      {
+        "img": "./image/img-1.png",
+        "alt" : "Owl Image 1",
+        "span": "Torvi / COO",
+        "p": "Felis eu pede mollis pretium. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus lingua. felis eu pede mollis pretium."
+
+      },
+      {
+        "img": "./image/img-2.png",
+        "alt" : "Owl Image 2",
+        "span": "Torvi / COO",
+        "p": "Felis eu pede mollis pretium. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus lingua. felis eu pede mollis pretium."
+
+      }
+    ]
+  }

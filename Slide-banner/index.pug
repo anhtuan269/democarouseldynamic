@@ -1,0 +1,38 @@
+.banner.pd6
+    .container
+        .testimonial.owl-carousel.owl-theme#owl-demo
+                
+ 
+script.
+    $(document).ready(function() {
+        $.getJSON("json/customData.json", function(json) {
+          appendJSONToHTML(json);
+          $("#owl-demo").owlCarousel({
+              nav: true,
+              loop: true,
+              responsive: {
+                  1000: {
+                      items: 1
+                  },
+                  0: {
+                      items:1
+                  }
+              }
+          });
+        });
+
+        function appendJSONToHTML(data) {
+          var content = "";
+
+          for (var i in data["items"]) {
+            var img = data["items"][i].img;
+            var alt = data["items"][i].alt;
+            var span = data["items"][i].span;
+            var p = data["items"][i].p;
+
+            content += '<div class="banner-content"><p>' + p +'</p><div class="testimonial-author"><img src="' + img + '" alt="' + alt + '"><span>' + span + '<span></div></div>';
+          }
+
+          $("#owl-demo").html(content);
+        }
+      });

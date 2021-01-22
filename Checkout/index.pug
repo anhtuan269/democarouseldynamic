@@ -1,0 +1,330 @@
+.checkout
+    .container 
+        .customer-zone
+            p
+                i.fas.fa-exclamation-circle.red
+                strong Error: 
+                |  Username is required.
+        .customer-zone
+            p
+                i.fas.fa-exclamation-circle
+                |Returning customer? 
+                a#login(href="#") Click here to login
+            .login-area.none
+                .login.mr20
+                    p If you have shopped with us before, please enter your details in the boxes below. If you are a new customer, please proceed to the Billing & Shipping section.
+                    .row
+                        form(action="#")
+                            label 
+                                | Username Or Email Adrees
+                                span.red  *
+                            input(type="text") 
+                        form(action="#")
+                            label 
+                                | Paswords
+                                span.red  *
+                            input(type="text")
+                .button
+                    button(type="submit") Login
+                    .checkbox
+                        input(type="checkbox")
+                        label Remember me
+                .lost-passwords
+                    a(href="#") Lost Your Passwords?
+                    
+        .customer-zone
+            p
+                i.fas.fa-exclamation-circle
+                |Have a coupon? 
+                a#code(href="#") Click here to enter your code
+            .code.mr20.none
+                form(action="#")
+                    input(type="text" placeholder=" Coupon Code")
+                    input(type="submit" value = "LOGIN")
+        .checkout-wrap
+            .col-7
+                .billing-info 
+                    h3 BILLING DETAILS
+                    .row
+                        .name-info.company
+                            .bill-info.mb20
+                                label(for="#")
+                                    |First Name *
+                                input(type="text")
+                            .bill-info.mb20
+                                label(for="#")
+                                    |Last Name *
+                                input(type="text")
+                        .company
+                            .bill-info.mb20
+                                label(for="#")
+                                    |Company Name *
+                                input(type="text")
+                        .company
+                            .bill-info.mb20
+                                label(for="#")
+                                    |Country *
+                                select#country(name="#")
+                                    option Select a country
+                                    option Azerbaijan
+                                    option Bahamas
+                                    option Bahrain
+                                    option Bangladesh
+                                    option Barbados
+                        .company
+                            .bill-info.mb20
+                                label(for="#")
+                                    |Street Address *
+                                input.mb20.billing-address(type="text" placeholder="House number and street name")
+                                input(type="text" placeholder="Apartment, suite, unit etc.")
+                        .company
+                            .bill-info.mb20
+                                label(for="#")
+                                    |Town / City *
+                                input(type="text")
+                        .company
+                            .bill-info.mb20
+                                label(for="#")
+                                    |State / Country *
+                                input(type="text")
+                        .company
+                            .bill-info.mb20
+                                label(for="#")
+                                    |Postcode / ZIP *
+                                input(type="text")
+                        .company
+                            .bill-info.mb20
+                                label(for="#")
+                                    |Phone *
+                                input(type="text")
+                        .company
+                            .bill-info.mb20
+                                label(for="#")
+                                    |Email Address *
+                                input(type="text")
+                    .checkout-account
+                        input.checkout-toggle(type="checkbox")
+                        span Create An Account
+                    .open-toggle.mb30.none
+                        lable Email Address
+                        input(type="text" placeholder="Passwords")
+                    .checkout-account
+                        input.checkout-toggle(type="checkbox")
+                        span Ship to a different address?
+                    .different-address.none
+                        .row
+                            .name-info.company
+                                .bill-info.mb20
+                                    label(for="#")
+                                        |First Name *
+
+                                    input(type="text")
+                                .bill-info.mb20
+                                    label(for="#")
+                                        |Last Name *
+
+                                    input(type="text")
+                            .company
+                                .bill-info.mb20
+                                    label(for="#") 
+                                        |Company Name *
+
+                                    input(type="text")
+                            .company
+                                .bill-info.mb20
+                                    label(for="#")
+                                        |Country *
+
+                                    select#country(name="#")
+                                        option Select a country
+                                        option Azerbaijan
+                                        option Bahamas
+                                        option Bahrain
+                                        option Bangladesh
+                                        option Barbados
+                            .company
+                                .bill-info.mb20
+                                    label(for="#")
+                                        |Street Address *
+
+                                    input.mb20.billing-address(type="text" placeholder="House number and street name")
+                                    input(type="text" placeholder="Apartment, suite, unit etc.")
+                            .company
+                                .bill-info.mb20
+                                    label(for="#")
+                                        |Town / City *
+
+                                    input(type="text")
+                            .mini
+                                .company
+                                    .bill-info.mb20
+                                        label(for="#")
+                                            |State / Country *
+    
+                                        input(type="text")
+                                .company
+                                    .bill-info.mb20
+                                        label(for="#")
+                                            |Postcode / ZIP *
+    
+                                        input(type="text")
+                                .company
+                                    .bill-info.mb20
+                                        label(for="#")
+                                            |Phone *
+    
+                                        input(type="text")
+                                .company
+                                    .bill-info.mb20
+                                        label(for="#")
+                                            |Email Address *
+    
+                                        input(type="text")
+                    .note
+                        label(for="#") Order notes
+                        textarea#note(name="message", cols="30",  placeholder ="Notes about your order, e.g. special notes for delivery. ")
+            .col-5
+                .order-area
+                    h3 YOUR ORDER
+                    .your-order
+                        .your-order-info
+                            table 
+                                thead
+                                    tr 
+                                        th.product-name Product
+                                        th.product-price Total
+                                tbody
+                                    tr
+                                        td.product-name
+                                            p Bodysuit With Long Sleeves × 1
+                                        td.product-price
+                                            p £150.00
+                                    tr
+                                        td.product-name
+                                            p Classic Polo Shirt × 1
+                                        td.product-price
+                                            p £150.00
+                                    tr
+                                        td.product-name
+                                            p Trouers With Side Dtripe × 1
+                                        td.product-price
+                                            p £150.00
+                                    tr
+                                        td.product-name
+                                            p Biker Jacket × 1
+                                        td.product-price
+                                            p £150.00
+                                tfoot
+                                    tr
+                                        td.product-name
+                                            p Subtotal 
+                                        td.product-price
+                                            p £150.00
+                                    tr
+                                        td.product-name
+                                            p.shipping Shipping
+                                        td.product-price
+                                            ul.shipping-list
+                                                li.cus-radio
+                                                    input(type="radio")#radio1
+                                                    label.checked#radio-1(for="radio1")
+                                                        span
+                                                        | Flat Rate
+                                                li.cus-radio
+                                                    input(type="radio")#radio2
+                                                    label#radio-2(for="radio2")
+                                                        span
+                                                        | Free Shipping
+                                                li.cus-radio
+                                                    input(type="radio")#radio3
+                                                    label#radio-3(for="radio3")
+                                                        span
+                                                        | Local Pickup
+                                    tr
+                                        td.product-name 
+                                            p Total
+                                        td.product-price 
+                                            p £600.00 
+
+
+
+                        .order-method
+                            .payment
+                                input(type="radio" value="cheque" ).input-ridio
+                                label.checked#radio-4
+                                    span
+                                    |Direct Bank Transfer 
+                                    
+                                .payment-bacs
+                                    p Make your payment directly into our bank account. Please use your Order ID as the payment reference.
+                            .payment
+                                input(type="radio" value="cheque" ).input-ridio
+                                label#radio-5(for="#")
+                                    span
+                                    | Check Payment
+                                    
+                            .payment
+                                input(type="radio" value="cheque" ).input-ridio
+                                label#radio-6(for="#")
+                                    span
+                                    |Cash On Delivery 
+                            .payment
+                                input(type="radio" value="cheque").input-ridio
+                                label#radio-7
+                                    span
+                                    | Paypal
+                                    img(src="./image/payment-checkout.png", alt="")
+                                    a(href="#") WHAT IS A PAYPAL?
+                    .place-order
+                        a(href="#") place order        
+script.
+    $('#login').click(function(){
+        $('.login-area').toggleClass('none');
+        $('.code').addClass('none');
+    })
+    $('#code').click(function(){
+        $('.code').toggleClass('none');
+        $('.login-area').addClass('none');
+    })
+    $('#address').click(function(){
+        ('.different-address').removeClass('none')
+    })
+     $('#radio-1').click(function(){
+        $('#radio-1').addClass('checked');
+        $('#radio-2').removeClass('checked');
+        $('#radio-3').removeClass('checked');
+    })
+    $('#radio-2').click(function(){
+        $('#radio-2').addClass('checked');
+        $('#radio-1').removeClass('checked');
+        $('#radio-3').removeClass('checked');
+    })
+    $('#radio-4').click(function(){
+        $('#radio-4').addClass('checked');
+        $('#radio-5').removeClass('checked');
+        $('#radio-6').removeClass('checked');
+        $('#radio-7').removeClass('checked');
+    })
+     $('#radio-3').click(function(){
+        $('#radio-3').addClass('checked');
+        $('#radio-2').removeClass('checked');
+        $('#radio-1').removeClass('checked');
+    })
+    $('#radio-5').click(function(){
+        $('#radio-5').addClass('checked');
+        $('#radio-4').removeClass('checked');
+        $('#radio-6').removeClass('checked');
+        $('#radio-7').removeClass('checked');
+    })
+     $('#radio-6').click(function(){
+        $('#radio-6').addClass('checked');
+        $('#radio-4').removeClass('checked');
+        $('#radio-5').removeClass('checked');
+        $('#radio-7').removeClass('checked');
+    })
+     $('#radio-7').click(function(){
+        $('#radio-7').addClass('checked');
+        $('#radio-4').removeClass('checked');
+        $('#radio-6').removeClass('checked');
+        $('#radio-5').removeClass('checked');
+    })

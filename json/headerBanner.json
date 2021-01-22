@@ -1,0 +1,19 @@
+{
+    "banners" : [
+      {
+        "sell": "20% Off For",
+        "member" : "New Member",
+        "special": "Pecial day",
+        "p": " We are here for you special day",
+        "btn": "start Shopping"
+
+      },
+      {
+        "sell": "20% Off For",
+        "member" : "New Member",
+        "special": "Pecial day",
+        "p": " We are here for you special day",
+        "btn": "start Shopping"
+      }
+    ]
+  }

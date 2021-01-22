@@ -1,0 +1,299 @@
+.single
+    .container
+        .row
+            .col-6.col-sm
+                .single-slide.owl-carousel.owl-theme#single-variable
+                    //- .single-product
+                    //-     .image
+                    //-         figure
+                    //-             a(href="#") 
+                    //-                 img(src="./image/product-2.jpg", alt="")
+                    //-         span.discount -36%
+                    //- .single-product
+                    //-     .image
+                    //-         figure
+                    //-             a(href="#") 
+                    //-                 img(src="./image/product-3.jpg", alt="")
+                    //-         span.discount -36%
+                    //- .single-product
+                    //-     .image
+                    //-         figure
+                    //-             a(href="#") 
+                    //-                 img(src="./image/product-4.jpg", alt="")
+                    //-         span.discount -36%
+            .col-6
+                .single-content
+                    h3.title Lity Majesty Palm
+                    span.product-sku 
+                        | SKU:
+                        span 501
+                    .rating
+                        ul
+                            li
+                                i.fas.fa-star
+                            li
+                                i.fas.fa-star
+                            li
+                                i.fas.fa-star
+                            li
+                                i.fas.fa-star
+                            li
+                                i.fas.fa-star
+                        span No reviews
+                    .price
+                        span.current-price $19.00
+                        span.old-price $29.00
+                        span.discount -36%
+                    p At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
+                    .variable-size.pd38
+                        span Size:
+                        ul.size-list
+                            li
+                               label#s.active S
+                            li
+                               label#m M
+                            li
+                               label#l L
+                            li
+                               label#xl XL
+                
+                    .variable-color.pd38
+                        span Color: 
+                        ul.color-list
+                            li  
+                                .color-radio
+                                    label.active(for="#")#purple 
+                            li  
+                                .color-radio
+                                    label(for="#")#violet 
+                            li  
+                                .color-radio
+                                    label(for="#")#black
+                            li  
+                                .color-radio
+                                    label(for="#")#pink
+                            li  
+                                .color-radio
+                                    label(for="#")#orange
+                    .variable-material.pd38
+                        span Material
+                        ul
+                            li
+                                label(for="#")#metal.active Metal
+                            li
+                                label(for="#")#resin Resin
+                            li
+                                label(for="#")#leather leather
+                            li
+                                label(for="#")#slag slag
+                            li
+                                label(for="#")#fiber fiber
+                    ul.product-additional-infomation
+                        li
+                            button
+                                i.fas.fa-pencil-ruler
+                                | Size Guide
+                        li
+                            button 
+                                i.fas.fa-truck
+                                | Shipping
+                        li
+                            button
+                                i.far.fa-envelope
+                                | Ask About This Product
+                    .quantity
+                        span Quantity:
+                        .cart-plus-minus
+                            button.qty-minus.qtybutton.dec -
+                            input#quantity(type="text" value="1" readonly)
+                            button.qty-plus.qtybutton.inc +
+                    .product-action
+                        .action
+                            button(title="Add To Cart") Add To Cart
+                        .action
+                            a(href="wishlist.html" title="Wishlist")
+                                i.fas.fa-heart
+                    .dynamic-checkout-button
+                        .checkbox-checkout
+                            input(type="checkbox")#disable
+                            label(for="#disable")
+                                span
+                                |  I Agree With The Terms And Conditions
+                        .checkout
+                            button Buy It Now
+                    .payment
+                         p Guaranteed safe checkout
+                         ul 
+                            li
+                                img(src="./image/payment-1.svg", alt="")
+                            li
+                                img(src="./image/payment-2.svg", alt="")
+                            li
+                                img(src="./image/payment-3.svg", alt="")
+                            li
+                                img(src="./image/payment-4.svg", alt="")
+                            li
+                                img(src="./image/payment-5.svg", alt="")
+                            li
+                                img(src="./image/payment-7.svg", alt="")
+                    .social-share
+                        span Share:
+                        ul
+                            li
+                                a(href="#")
+                                    i.fab.fa-facebook-f
+                            li
+                                a(href="#")
+                                    i.fab.fa-twitter
+                            li
+                                a(href="#")
+                                    i.fab.fa-pinterest-p
+                            
+                            
+
+script.
+     $(document).ready(function() {
+        $.getJSON("json/singleProduct.json", function(json) {
+          appendJSONToHTML(json);
+          $("#single-variable").owlCarousel({
+              nav: true,
+              loop: true,
+              responsive: {
+               1000: {
+                    items: 1
+                },
+                0: {
+                    items: 1
+                }
+              }
+          });
+        });
+        function appendJSONToHTML(data) {
+          var content = "";
+
+          for (var i in data["single"]) {
+            var img = data["single"][i].img;
+            var alt = data["single"][i].alt;
+            var span = data["single"][i].span;
+            
+            
+
+            content += '<div class="single-product"><div class="image"><figure><a href="#"><img src="' + img + '"alt="'+ alt + '"></a></figure><span class="discount"> ' + span + '</span></div></div>' ;
+          }
+
+          $("#single-variable").html(content);
+        }
+      });
+    $('#metal').click(function(){
+        $('#metal').addClass('active');
+        $('#resin').removeClass('active');
+        $('#leather').removeClass('active');
+        $('#slag').removeClass('active');
+        $('#fiber').removeClass('active');
+    })
+    $('#resin').click(function(){
+        $('#resin').addClass('active');
+        $('#metal').removeClass('active');
+        $('#leather').removeClass('active');
+        $('#slag').removeClass('active');
+        $('#fiber').removeClass('active');
+    })
+    $('#leather').click(function(){
+        $('#leather').addClass('active');
+        $('#resin').removeClass('active');
+        $('#metal').removeClass('active');
+        $('#slag').removeClass('active');
+        $('#fiber').removeClass('active');
+    })
+    $('#slag').click(function(){
+        $('#slag').addClass('active');
+        $('#resin').removeClass('active');
+        $('#leather').removeClass('active');
+        $('#metal').removeClass('active');
+        $('#fiber').removeClass('active');
+    })
+    $('#fiber').click(function(){
+        $('#fiber').addClass('active');
+        $('#resin').removeClass('active');
+        $('#leather').removeClass('active');
+        $('#slag').removeClass('active');
+        $('#metal').removeClass('active');
+    })
+    $('#purple').click(function(){
+        $('#purple').addClass('active');
+        $('#violet').removeClass('active');
+        $('#black').removeClass('active');
+        $('#pink').removeClass('active');
+        $('#orange').removeClass('active');
+    })
+    $('#violet').click(function(){
+        $('#violet').addClass('active');
+        $('#purple').removeClass('active');
+        $('#black').removeClass('active');
+        $('#pink').removeClass('active');
+        $('#orange').removeClass('active');
+    })
+    $('#black').click(function(){
+        $('#black').addClass('active');
+        $('#violet').removeClass('active');
+        $('#purple').removeClass('active');
+        $('#pink').removeClass('active');
+        $('#orange').removeClass('active');
+    })
+    $('#pink').click(function(){
+        $('#pink').addClass('active');
+        $('#violet').removeClass('active');
+        $('#black').removeClass('active');
+        $('#purple').removeClass('active');
+        $('#orange').removeClass('active');
+    })
+    $('#orange').click(function(){
+        $('#orange').addClass('active');
+        $('#violet').removeClass('active');
+        $('#black').removeClass('active');
+        $('#pink').removeClass('active');
+        $('#purple').removeClass('active');
+    })
+    $('#s').click(function(){
+        $('#s').addClass('active');
+        $('#m').removeClass('active');
+        $('#l').removeClass('active');
+        $('#xl').removeClass('active');
+    })
+    $('#m').click(function(){
+        $('#m').addClass('active');
+        $('#s').removeClass('active');
+        $('#l').removeClass('active');
+        $('#xl').removeClass('active');
+    })
+    $('#l').click(function(){
+        $('#l').addClass('active');
+        $('#m').removeClass('active');
+        $('#s').removeClass('active');
+        $('#xl').removeClass('active');
+    })
+    $('#xl').click(function(){
+        $('#xl').addClass('active');
+        $('#m').removeClass('active');
+        $('#l').removeClass('active');
+        $('#s').removeClass('active');
+    })
+   
+     if ($('.cart-plus-minus').length) {
+        var q = $('.cart-plus-minus');
+        q.each(function () {
+            var $this = $(this),
+                button = $this.children('button'),
+                input = $this.children('input[type="text"]'),
+                val = +input.val();
+            button.on('click', function () {
+                if ($(this).hasClass('qty-minus')) {
+                    if (val === 1) return false;
+                    input.val(--val);
+                }
+                else {
+                    input.val(++val);
+                }
+            });
+        });
+    }

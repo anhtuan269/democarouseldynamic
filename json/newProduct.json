@@ -1,0 +1,90 @@
+{
+    "products":[
+        {
+            "img": "./image/product-1.jpg",
+            "img1": "./image/product-9.jpg",
+            "alt": "New Product",
+            "sold": "Soldout",
+            "name": "Sweet Alyssum",
+            "price": "$40.00",
+            "old":  "$60.00"
+            
+        },
+        {
+            "img": "./image/product-2.jpg",
+            "img1": "./image/product-8.jpg",
+            "alt": "New Product",
+            "discount": "-34%",
+            "name": "Sweet Alyssum",
+            "price": "$50.00",
+            "old":  "$80.00"
+        },
+        {
+            "img": "./image/product-3.jpg",
+            "discount":"-34%",  
+            "sold":"soldout",  
+            "img1": "./image/product-7.jpg",
+            "alt": "New Product",
+            "name": "Sweet Alyssum",
+            "price": "$25.00",
+            "old": "$52.00"
+        },
+        {
+            "img": "./image/product-4.jpg",
+            "img1": "./image/product-6.jpg",
+            "alt": "New Product",
+            "sold": "Soldout",
+            "discount": "-34%",
+            "name": "Sweet Alyssum",
+            "price": "$20.00",
+            "old":  "$60.00",
+            "count": "00",
+            "day": "Days",
+            "hour":"Hour",
+            "min": "Min",
+            "sec":" Sec"
+        },
+        {
+            "img": "./image/product-5.jpg",
+            "img1": "./image/product-5.jpg",
+            "alt": "New Product",
+            "sold": "Soldout",
+            "name": "Sweet Alyssum",
+            "price": "$40.00",
+            "old":  "$60.00"
+        },
+        {
+            "img": "./image/product-6.jpg",
+            "img1": "./image/product-4.jpg",
+            "alt": "New Product",
+            "name": "Sweet Alyssum",
+            "price": "$40.00",
+            "old":  "$60.00"
+        },
+        {
+            "img": "./image/product-7.jpg",
+            "img1": "./image/product-3.jpg",
+            "alt": "New Product",
+            "name": "Sweet Alyssum",
+            "price": "$40.00"
+        },
+        {
+            "img": "./image/product-8.jpg",
+            "img1": "./image/product-2.jpg",
+            "alt": "New Product",
+            "discount": "-34%",            
+            "name": "Sweet Alyssum",
+            "price": "$40.00",
+            "old":  "$60.00"
+        },
+        {
+            "img": "./image/product-9.jpg",
+            "img1": "./image/product-1.jpg",
+            "alt": "New Product",
+            "discount": "-34%",
+            "name": "Sweet Alyssum",
+            "price": "$40.00",
+            "old":  "$60.00"
+        }
+    ]
+}

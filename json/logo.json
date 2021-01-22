@@ -1,0 +1,28 @@
+{
+    "logos" : [
+        {
+            "img": "./image/brand-1.jpg",
+            "alt": "Logo Variable"
+        },
+        {
+            "img": "./image/brand-2.jpg",
+            "alt": "Logo Variable"
+        },
+        {
+            "img": "./image/brand-3.jpg",
+            "alt": "Logo Variable"
+        },
+        {
+            "img": "./image/brand-4.jpg",
+            "alt": "Logo Variable"
+        },
+        {
+            "img": "./image/brand-5.jpg",
+            "alt": "Logo Variable"
+        },
+        {
+            "img": "./image/brand-6.jpg",
+            "alt": "Logo Variable"
+        }
+    ]
+}

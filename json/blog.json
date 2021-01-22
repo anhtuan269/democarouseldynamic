@@ -1,0 +1,65 @@
+{
+    "blogs" : [
+        {
+            "img" : "./image/blog-01.jpg",
+            "alt" : "Blog Image",
+            "title" : "Flower Beaty",
+            "by" : "By",
+            "span" : "Shopify Team HasTheme / August 12, 2020",
+            "lorem" : " Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incidid...",
+            "footer" : " Continute Reading",
+            "count" : "0"
+        },
+        {
+            "img" : "./image/blog-02.jpg",
+            "alt" : "Blog Image",
+            "title" : "Flower Florists",
+            "by" : "By",
+            "span" : "Shopify Team HasTheme / August 12, 2020",
+            "lorem" : " Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incidid...",
+            "footer" : " Continute Reading",
+            "count" : "0"
+        },
+        {
+            "img" : "./image/blog-03.jpg",
+            "alt" : "Blog Image",
+            "title" : "Flower Power",
+            "by" : "By",
+            "span" : "Shopify Team HasTheme / August 12, 2020",
+            "lorem" : " Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incidid...",
+            "footer" : " Continute Reading",
+            "count" : "0"
+        },
+        {
+            "img" : "./image/blog-01.jpg",
+            "alt" : "Blog Image",
+            "title" : "Flower Beaty",
+            "by" : "By",
+            "span" : "Shopify Team HasTheme / August 12, 2020",
+            "lorem" : " Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incidid...",
+            "footer" : " Continute Reading",
+            "count" : "0"
+        },
+        {
+            "img" : "./image/blog-02.jpg",
+            "alt" : "Blog Image",
+            "title" : "Flower Florists",
+            "by" : "By",
+            "span" : "Shopify Team HasTheme / August 12, 2020",
+            "lorem" : " Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incidid...",
+            "footer" : " Continute Reading",
+            "count" : "0"
+        },
+        {
+            "img" : "./image/blog-03.jpg",
+            "alt" : "Blog Image",
+            "title" : "Flower Power",
+            "by" : "By",
+            "span" : "Shopify Team HasTheme / August 12, 2020",
+            "lorem" : " Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incidid...",
+            "footer" : " Continute Reading",
+            "count" : "0"
+        }
+
+    ]
+}

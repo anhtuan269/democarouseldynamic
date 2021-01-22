@@ -1,0 +1,95 @@
+.cart 
+    .container
+        .table-content.table-responsive.cart-content
+            table
+                thead
+                    tr
+                        th Image
+                        th Product 
+                        th Price
+                        th Quantity
+                        th Total
+                        th Remove
+                tbody
+                    tr#product-1
+                        td.thumbnail 
+                            img(src="./image/cart-1.jpg", alt="")
+                        td.name
+                            a(href="single.html") Rock Soapwort
+                        td.price 
+                            span $50.00
+                        td.quantity
+                            .cart-plus-minus
+                                button.qty-plus.qtybutton.inc +
+                                input#quantity(type="text" value="1" readonly)
+                                button.qty-minus.qtybutton.dec -
+                        td.subtotal
+                            span $ 50.00
+                        td.remove                           
+                            i#remove-1(style="cursor: pointer" onclick="close()").fas.fa-times
+                    tr#product-2
+                        td.thumbnail 
+                            img(src="./image/cart-2.jpg", alt="")
+                        td.name
+                            a(href="single.html") Sweet Alyssum
+                        td.price 
+                            span $ 50.00
+                        td.quantity
+                            .cart-plus-minus
+                                button.qty-plus.qtybutton.inc +
+                                input#quantity(type="text" value="1" readonly)
+                                button.qty-minus.qtybutton.dec -
+                        td.subtotal
+                            span $ 50.00
+                        td.remove                          
+                            i#remove-2(style="cursor: pointer").fas.fa-times
+                    tr#product-3
+                        td.thumbnail 
+                            img(src="./image/cart-3.jpg", alt="")
+                        td.name
+                            a(href="single.html") Wild Roses
+                        td.price 
+                            span $ 50.00
+                        td.quantity
+                            .cart-plus-minus
+                                button.qty-plus.qtybutton.inc +
+                                input#quantity(type="text" value="1" readonly)
+                                button.qty-minus.qtybutton.dec -
+                        td.subtotal
+                            span $ 50.00
+                        td.remove                           
+                            i#remove-3(style="cursor: pointer").fas.fa-times
+        .cart-update
+            .shipping
+                a(href="#") Continute Shopping
+            .cart-clear
+                a.mr5(href="#") Update Cart
+                a(href="#") Clear Cart
+script.
+    $('#remove-1').click(function(){
+        $('#product-1').addClass('none');
+    })
+     $('#remove-2').click(function(){
+        $('#product-2').addClass('none');
+    })
+     $('#remove-3').click(function(){
+        $('#product-3').addClass('none');
+    })
+     if ($('.cart-plus-minus').length) {
+        var q = $('.cart-plus-minus');
+        q.each(function () {
+            var $this = $(this),
+                button = $this.children('button'),
+                input = $this.children('input[type="text"]'),
+                val = +input.val();
+            button.on('click', function () {
+                if ($(this).hasClass('qty-minus')) {
+                    if (val === 1) return false;
+                    input.val(--val);
+                }
+                else {
+                    input.val(++val);
+                }
+            });
+        });
+    }

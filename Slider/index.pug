@@ -1,0 +1,72 @@
+.slider 
+    .slide.owl-carousel.owl-theme#slider-banner
+        //- .single-slider.slide-1
+        //-     .container
+        //-         .content
+        //-             h5
+        //-                 | 20% Off For 
+        //-                 br
+        //-                 |  New Members
+        //-             h2 Your Special Day!
+        //-             p We are here for you Special day
+        //-             .button
+        //-                 a.btn(href="#") Start Shopping
+        //- .single-slider.slide-2
+        //-     .container
+        //-         .content
+        //-             h5
+        //-                 | 20% Off For 
+        //-                 br
+        //-                 |  New Members
+        //-             h2 Your Special Day!
+        //-             p We are here for you Special day
+        //-             .button
+        //-                 a.btn(href="#") Start Shopping
+script.
+    $(document).ready(function() {
+        $.getJSON("json/headerBanner.json", function(json) {
+          appendJSONToHTML(json);
+          $("#slider-banner").owlCarousel({
+              nav: true,
+              loop: true,
+              autoplay: true,
+              responsive: {
+                  1000: {
+                      items: 1
+                  },
+                  0: {
+                      items:1
+                  }
+              }
+          });
+        });
+        checkClass();
+        $('#slider-banner').on('changed.owl.carousel', function(event) {
+            checkClass();
+        });
+        function checkClass(){
+            var total = $('#slider-banner .owl-stage .owl-item').length;
+            //- $(' #slider-banner .owl-stage .owl-item').removeClass( '');
+            $('#slider-banner .owl-stage .owl-item').each(function(index){
+                if (index===1){
+                    $(this).addClass('slide2');
+                }
+               
+            });
+        }
+        function appendJSONToHTML(data) {
+          var content = "";
+
+          for (var i in data["banners"]) {
+            var sell = data["banners"][i].sell;
+            var member = data["banners"][i].member;
+            var special = data["banners"][i].special;
+            var p = data["banners"][i].p;
+            var btn = data["banners"][i].btn;
+
+            content += '<div class="single-slider slide-1  "> <div class="container"> <div class="content"> <h5>' + sell + '<br>' + member + '</h5><h2>' + special +'</h2><p>' + p + '</p><div class="button"><a class="btn" href="#">' + btn + '</a></div></div></div></div>';
+          }
+
+          $("#slider-banner").html(content);
+        }
+      });

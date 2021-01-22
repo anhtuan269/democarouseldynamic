@@ -1,0 +1,151 @@
+.blog.pd5
+    .container
+        .title
+            h2 From Our Blog
+            p A perfect blend of creativity, energy, communication, happiness and love. Let us arrange a smile for you.
+        .blog-slide.owl-carousel.owl-theme#blog
+            //- .single-blog
+            //-     .blog-image
+            //-         a(href="#")
+            //-             img(src="./image/blog-01.jpg", alt="")
+            //-     .blog-content
+            //-         h4.title
+            //-             a(href="#") Flower Beauty
+            //-         p 
+            //-             | By
+            //-             span  Shopify Team HasTheme / August 12, 2020
+            //-         .blog-info
+            //-             p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incidid...
+            //-         .blog-footer
+            //-             a(href="#") Continute Reading
+            //-             p.comment-count
+            //-                 i.far.fa-comment
+            //-                 | 0
+            //- .single-blog
+            //-     .blog-image
+            //-         a(href="#")
+            //-             img(src="./image/blog-02.jpg", alt="")
+            //-     .blog-content
+            //-         h4.title
+            //-             a(href="#") Flower Florists
+            //-         p 
+            //-             | By
+            //-             span  Shopify Team HasTheme / August 12, 2020
+            //-         .blog-info
+            //-             p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incidid...
+            //-         .blog-footer
+            //-             a(href="#") Continute Reading
+            //-             p.comment-count
+            //-                 i.far.fa-comment
+            //-                 | 0
+            //- .single-blog
+            //-     .blog-image
+            //-         a(href="#")
+            //-             img(src="./image/blog-03.jpg", alt="")
+            //-     .blog-content
+            //-         h4.title
+            //-             a(href="#") Flower Power
+            //-         p 
+            //-             | By
+            //-             span  Shopify Team HasTheme / August 12, 2020
+            //-         .blog-info
+            //-             p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incidid...
+            //-         .blog-footer
+            //-             a(href="#") Continute Reading
+            //-             p.comment-count
+            //-                 i.far.fa-comment
+            //-                 | 0
+            //- .single-blog
+            //-     .blog-image
+            //-         a(href="#")
+            //-             img(src="./image/blog-01.jpg", alt="")
+            //-     .blog-content
+            //-         h4.title
+            //-             a(href="#") Flower Beauty
+            //-         p 
+            //-             | By
+            //-             span  Shopify Team HasTheme / August 12, 2020
+            //-         .blog-info
+            //-             p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incidid...
+            //-         .blog-footer
+            //-             a(href="#") Continute Reading
+            //-             p.comment-count
+            //-                 i.far.fa-comment
+            //-                 | 0
+            //- .single-blog
+            //-     .blog-image
+            //-         a(href="#")
+            //-             img(src="./image/blog-02.jpg", alt="")
+            //-     .blog-content
+            //-         h4.title
+            //-             a(href="#") Flower Florists
+            //-         p 
+            //-             | By
+            //-             span  Shopify Team HasTheme / August 12, 2020
+            //-         .blog-info
+            //-             p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incidid...
+            //-         .blog-footer
+            //-             a(href="#") Continute Reading
+            //-             p.comment-count
+            //-                 i.far.fa-comment
+            //-                 | 0
+            //- .single-blog
+            //-     .blog-image
+            //-         a(href="#")
+            //-             img(src="./image/blog-03.jpg", alt="")
+            //-     .blog-content
+            //-         h4.title
+            //-             a(href="#") Flower Power
+            //-         p 
+            //-             | By
+            //-             span  Shopify Team HasTheme / August 12, 2020
+            //-         .blog-info
+            //-             p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incidid...
+            //-         .blog-footer
+            //-             a(href="#") Continute Reading
+            //-             p.comment-count
+            //-                 i.far.fa-comment
+            //-                 | 0
+script.
+    $(document).ready(function() {
+        $.getJSON("json/blog.json", function(json) {
+          appendJSONToHTML(json);
+          $("#blog").owlCarousel({
+              nav: true,
+              loop: true,
+              responsive: {
+                1000: {
+                    items: 3
+                },
+                768: {
+                    items:2
+                },
+                480: {
+                    items:1
+                },
+                0: {
+                    items:1
+                }
+              }
+          });
+        });
+        function appendJSONToHTML(data) {
+          var content = "";
+
+          for (var i in data["blogs"]) {
+            var img = data["blogs"][i].img;
+            var alt = data["blogs"][i].alt;
+            var title = data["blogs"][i].title;
+            var by = data["blogs"][i].by;
+            var span = data["blogs"][i].span;
+            var lorem = data["blogs"][i].lorem;
+            var footer = data["blogs"][i].footer;
+            var count = data["blogs"][i].count;
+            
+
+            content += '<div class="single-blog"><div class="blog-image"><a href ="#" ><img src="' + img + '"alt="' + alt + '"></a></div><div class=" blog-content"><h4 class="title"><a href ="#">' + title + '</a></h4><p>' + by +'<span>' + span + '</span></p><div class="blog-info"><p>' + lorem +'</p></div><div class="blog-footer"><a href="#">' + footer + '</a><p class="comment-count"><i class=" far fa-comment"></i>' + count+ '</p> </div></div></div>';
+          }
+
+          $("#blog").html(content);
+        }
+      });

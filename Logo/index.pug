@@ -1,0 +1,66 @@
+.logo-variable
+    .container
+        .logo-slide.owl-carousel.owl-theme#logo
+            //- .single-logo
+            //-     .image
+            //-         a(href="#")
+            //-             img(src="./image/brand-1.jpg", alt="")
+            //- .single-logo
+            //-     .image
+            //-         a(href="#")
+            //-             img(src="./image/brand-2.jpg", alt="")
+            //- .single-logo
+            //-     .image
+            //-         a(href="#")
+            //-             img(src="./image/brand-3.jpg", alt="")
+            //- .single-logo
+            //-     .image
+            //-         a(href="#")
+            //-             img(src="./image/brand-4.jpg", alt="")
+            //- .single-logo
+            //-     .image
+            //-         a(href="#")
+            //-             img(src="./image/brand-5.jpg", alt="")
+            //- .single-logo
+            //-     .image
+            //-         a(href="#")
+            //-             img(src="./image/brand-6.jpg", alt="")
+script.
+      $(document).ready(function() {
+        $.getJSON("json/logo.json", function(json) {
+          appendJSONToHTML(json);
+          $("#logo").owlCarousel({
+              nav: true,
+              loop: true,
+              responsive: {
+                1000: {
+                    items: 6
+                },
+                768: {
+                    items:5
+                },
+                480: {
+                    items:2
+                },
+                0: {
+                    items:2
+                }
+            }
+          });
+        });
+        function appendJSONToHTML(data) {
+          var content = "";
+
+          for (var i in data["logos"]) {
+            var img = data["logos"][i].img;
+            var alt = data["logos"][i].alt;           
+            
+
+            content += '<div class="single-logo"><div class="image"><a href="#"><img src="' + img + '"alt="'+ alt + '"></a></div></div>';
+          }
+
+          $("#logo").html(content);
+        }
+      });
+   
+                

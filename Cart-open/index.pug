@@ -1,0 +1,98 @@
+.open
+    .container
+        .open-grid
+            .two-cart
+                .cart-tax.mt40
+                    .title
+                        h4 caculate shipping
+                        p Estimate your shipping fee *
+                    .tax
+                        .tax-select
+                            p Calculate shipping
+                            .select
+                                select#country(name="country" )
+                                    option Select a Country...
+                                    option Bangladesh
+                                    option Albania
+                                    option Aland Island
+                                    option Afghanistan
+                                    option Belgium
+                            .select
+                                select#country(name="country")
+                                    option Select an option
+                                    option Bangladesh
+                                    option Albania
+                                    option Aland Island
+                                    option Afghanistan
+                                    option Belgium
+                            .select
+                                input(type="text" placeholder="Postcode/Ziip")
+                            .btn-coupon.pd15
+                                button.btn-2(type="submit") Update Total
+                .cart-tax.coupon.mt40
+                    .title
+                        h4 Coupon Code
+                    .tax
+                        .tax-select
+                            .select
+                                p Enter your coupon code if you have one.
+                                form(action="#")
+                                    input(type="text" placeholder="Enter your coupon code...")
+                            .btn-coupon.pd15
+                                button.btn-2(type="submit") Apply Coupon
+            .cart-tax.mt40
+                .title
+                    h4 Cart Total                
+                .total
+                    table
+                        tbody
+                            tr
+                                td 
+                                    p Subtotal
+                                td 
+                                    p £600.00
+                            tr
+                                td
+                                    p.shipping Shipping
+                                td 
+                                    ul.shipping-list
+                                        li.cus-radio
+                                            input(type="radio")#radio1
+                                            label.checked#radio-1(for="radio1")
+                                                span
+                                                | Flat Rate
+                                        li.cus-radio
+                                            input(type="radio")#radio2
+                                            label#radio-2(for="radio2")
+                                                span
+                                                | Free Shipping
+                                        li.cus-radio
+                                            input(type="radio")#radio3
+                                            label#radio-3(for="radio3")
+                                                span
+                                                | Local Pickup
+                            tr
+                                td 
+                                    p Total
+                                td 
+                                    p £600.00                       
+                .pd15    
+                    a.btn-3(href="checkout.html") Procceed To Checkout
+script.
+    $('#radio-1').click(function(){
+        $('#radio-1').addClass('checked');
+        $('#radio-2').removeClass('checked');
+        $('#radio-3').removeClass('checked');
+    })
+    $('#radio-2').click(function(){
+        $('#radio-2').addClass('checked');
+        $('#radio-1').removeClass('checked');
+        $('#radio-3').removeClass('checked');
+    })
+    $('#radio-3').click(function(){
+        $('#radio-3').addClass('checked');
+        $('#radio-2').removeClass('checked');
+        $('#radio-1').removeClass('checked');
+    })
+    
+
